@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Blog Website
 
-> Description the project.
+>This is a blog website that allow users to creat post, update post, and delete post. It also allow users to comment and like other users post. 
 
 
 ## Built With
@@ -11,52 +11,57 @@
 - Frameworks
 - Technologies used
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing. install the dependecies of the database you will be using**
 
+
+## Built With
+
+- Ruby
+- POSTGRESQL
+- Rspec
+
+
+
+## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- ruby on rails 
+- postgresql
+- rspec
 
 ### Setup
-
-### Install
+- Open terminal
+- Clone the repo using command `git clone git@github.com:henrycode460/myblog.git`
+- Change directory using `cd myblog`
+- Run `rails server`
 
 ### Usage
+- You can use the app to create a post, update, and delete a post and also comment, and like other user post
 
 ### Run tests
-
-### Deployment
-
+- run `rspec` in terminal
 
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Henry Varflay Singbeh**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/henrycode460)
+- Twitter: [@twitterhandle](https://www.linkedin.com/in/henry-varflay-singbeh)
+- LinkedIn: [LinkedIn](https://twitter.com/code460 )
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/henrycode460/myblog/issues).
 
 ## Show your support
 
