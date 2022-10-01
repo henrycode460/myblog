@@ -3,6 +3,8 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
+    - "bin"
+    - "bin/bundle"
     - "node_modules/**/*"
 
   DisplayCopNames: true
@@ -12,12 +14,12 @@ Layout/LineLength:
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
-  Max: 50
+  Max: 52
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 30
+  Max: 80
 
 
 Style/Documentation:
@@ -43,6 +45,8 @@ Layout/MultilineMethodCallIndentation:
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Lint/ScriptPermission:
   Enabled: false
 Style/HashEachMethods:
   Enabled: false
