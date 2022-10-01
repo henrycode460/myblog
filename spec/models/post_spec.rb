@@ -1,15 +1,13 @@
-require_relative '../rails_helper.rb'
+require_relative '../rails_helper'
 
 RSpec.describe Post, type: :model do
-
-    
   before(:each) do
     @user = User.create(
-        name: 'Henry',
-        photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-        bio: 'Software Developer',
-        post_counter: 0
-      )
+      name: 'Henry',
+      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+      bio: 'Software Developer',
+      post_counter: 0
+    )
     @post = Post.create(
       author: @user,
       title: 'Dokin',
@@ -31,7 +29,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'comment counter should be greater than or equal to zero' do
-      @post. commentscounter = 'try'
+      @post.commentscounter = 'try'
       expect(@post).to_not be_valid
     end
 
@@ -41,16 +39,11 @@ RSpec.describe Post, type: :model do
     end
   end
 
- context 'methods the check for comments and like increament' do
-     it 'calling the post_counter increases the postcounter by 1' do
-    @user.post_counter = 1
-    @post.update_user_posts_count
-    expect(@user.post_counter).to eq(2)
-
-     end
-
-
+  context 'methods the check for comments and like increament' do
+    it 'calling the post_counter increases the postcounter by 1' do
+      @user.post_counter = 1
+      @post.update_user_posts_count
+      expect(@user.post_counter).to eq(2)
+    end
   end
-
-  
 end
