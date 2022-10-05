@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  def index
-    puts params[:user_posts]
+ def index
+    @users = User.all
   end
 
   def show
-    puts params[:id]
+   
   end
 end
