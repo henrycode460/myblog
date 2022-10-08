@@ -1,28 +1,26 @@
-<h1>This is an individual user information</h1>
+<div class="user-show-c">
+    <div class="user-box">
+        <img class="user-img" src=<%= @user.photo %> alt="user"/>
+        <div class="user-info-box">
+            <h2 class="user-name"><%= @user.name %></h2>
+            <p class="user-post-count">Number of posts: <%= @user.posts_counter%></p>
+        </div>
+    </div>
 
-<h2>John Doe</h2>
-<h3>3 posts</h3>
-<hr>
-<br>
-<br>
-<h2>Bio</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-<hr>
-<br>
-<br>
+    <p class="user-bio"><%= @user.bio %></p>
 
-<h3>Post # 1</h3>
-<p> adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-<hr>
-<br>
-<h3>Post # 2</h3>
-<p> adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-<hr>
-<br>
-<h3>Post # 3</h3>
-<p> adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-<hr>
-<br>
-<br>
-<br>
-<button>See All Post</button>
+
+    <% @user.recent_posts.each do |post| %>
+        <%= link_to user_post_path(@user.id, post.id), class:"text-dec" do %> 
+        <div class="user-recent-post">
+            <h2 class="user-post-title">Post : <%= post.title %></h2>
+            <p class="user-post-text"><%= post.text %></p>
+            <h3 class="user-post-counters">Comments: <%= post.comments_conter%>, Likes: <%= post.likes_counter %><h3>
+        </div>
+        <% end %>
+    <% end%>
+
+    <button class="button">
+        <%= link_to "See all posts", user_posts_path(@user), class:"text-dec" %>
+    </button>
+</div>

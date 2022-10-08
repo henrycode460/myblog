@@ -1,1 +1,13 @@
-<h1>This is individual user post</h1>
+<div>
+    <div>
+        <div>
+            <h2>Post : <%= @post.title %> by <%= @post.author_id %></h2>
+            <h3>Comments: <%= @post.comments_conter%>, Likes: <%= @post.likes_counter %><h3>
+        </div>
+        <p><%= @post.text %></p>
+
+        <% @comments.each do |comment|%>
+            <h3><%= comment.author_id %><%= comment.text %></h3>
+        <% end %>
+    </div>
+</div>
