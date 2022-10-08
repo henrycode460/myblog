@@ -1,17 +1,15 @@
-<h1>This is the list of our users and number of post</h1>
-
-<ul>
-<li> 
-<h3>John Doe</h3>
-<h4> 3 Posts </h2>
-</li>
-<li> 
-<h3>Danile Tokoah</h3>
-<h4> 4 Posts </h2>
-</li>
-<li> 
-<h3>Annie Daniels</h3>
-<h4> 2 Posts </h2>
-</li>
-</ul>
-</ul>
+<div class="users-container">
+    <h1 class="users-heading">Users Count <%= @users.length%></h1>
+    <% @users.each do |user| %>
+        <%= link_to user_path(user.id), class:"text-dec" do %>
+        <div class="user-box">
+            <div class="user-info-box">
+                <h2 class="user-name"><%= user.name %></h2>
+              <img class="user-img" src=<%= user.photo %> alt=<%= user.name %>/>
+              <h2 class="user-bio"><%= user.bio %></h2>
+                <p class="user-post-count">Total Posts: <%= user.posts_counter%></p>
+            </div>
+        </div>
+        <% end%>
+    <% end %>
+</div>
