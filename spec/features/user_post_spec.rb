@@ -18,12 +18,15 @@ RSpec.describe 'Check User Story', type: :feature do
   end
 
   describe 'Check User Post Index' do
+    before(:all) do
+      @post = Post.first
+    end
     before(:each) do
       visit user_posts_path(@user)
     end
 
     it 'I can see the user\'s profile picture' do
-      expect(page).to have_xpath("//img[contains(@src,'#{@post}')]")
+      expect(page).to have_xpath("//img[contains(@src,'#{@user.photo}')]")
     end
 
     it 'I can see the user\'s username' do
