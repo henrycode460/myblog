@@ -10,9 +10,7 @@ RSpec.describe 'users#index', type: :feature do
     end
 
     it "Shows the user's photo" do
-      all('img').each do |i|
-        expect(i[:src]).to eq('Tom.png')
-      end
+      expect(page).to have_xpath("//img[contains(@src,'#{@user1.photo}')]")
     end
 
     it 'shows the number of posts each user has written' do
