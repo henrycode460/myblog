@@ -1,7 +1,7 @@
 <div>
 
     <div>
-        <img src=<%= @post%> alt="user"/>
+        <img src=<%= @user.photo%> alt="user"/>
         <div>
             <h2><%= @user.name %></h2>
           
@@ -16,7 +16,7 @@
             <p><%= post.text %></p>
             <h3>Comments: <%= post.comments_conter%>, Likes: <%= post.likes_counter %><h3>
 
-            <% post.recent_comments.each do |comment|%>
+            <% post.comments.each do |comment|%>
                 <h3><%= comment.author_id %><%= comment.text %></h3>
             <% end %>
 
