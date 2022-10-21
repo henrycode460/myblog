@@ -15,7 +15,7 @@
             <% @comments.each do |comment|%>
                 <h3><%= comment.text %></h3>
                 <% if can? :destroy, comment%>
-                <%= button_to 'delete', user_post_comment_path(post_id: @post.id, id: comment.id), method => :delete, data: { confirm: 'Do you really want to delete this!'} %>
+                <%= button_to 'delete', user_post_comments_path(post_id: @post.id, id: comment.id), method => :delete, data: { confirm: 'Do you really want to delete this!'} %>
             <% end%>
             <% end %>
     </div>
