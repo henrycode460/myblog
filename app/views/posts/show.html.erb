@@ -14,7 +14,19 @@
           
             <% @comments.each do |comment|%>
                 <h3><%= comment.text %></h3>
+               <% if can?(:destroy, comment) %>
+               <%= button_to 'delete', user_post_comment_path(post_id: @post.id ,id: comment.id), :method => :delete, data: { confirm: 'Are you sure?' } %>
+            <% end%>
             <% end %>
     </div>
          <%= render partial: "add_comments", local: { post: @post } %>
+         
+          
+    <%if can? :destroy, @post %>
+ <%= button_to 'Delete Post', user_post_path(post_id: @post.id), :method => :delete, data: { confirm: 'Do you really want to delete this post?' }%>
+
+<%end%>
+
 </div>
+
+
