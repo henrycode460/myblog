@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   def new
     @user = current_user
   end
@@ -51,6 +50,3 @@ class PostsController < ApplicationController
     @comments = Comment.where(post_id: params[:id].to_i)
   end
 end
-
-
-
